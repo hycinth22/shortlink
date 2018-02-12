@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>short link</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="am-container am-topbar">
+    <h1 class="am-topbar-brand">Short Link</h1>
+</header>
+
+<div class="am-g am-g-fixed" id="inputBox">
+    <div class="am-u-md-9 am-u-md-centered">
+        <div class="am-form">
+            <div class="am-form-group">
+                <label for="link">Link: </label>
+                <input type="url" id="link" placeholder="输入要缩短的链接">
+            </div>
+        </div>
+        <button class="am-btn am-btn-sm am-btn-primary" id="submitBtn">生成</button>
+    </div>
+</div>
+
+<div class="am-g am-g-fixed am-padding" id="resultBox">
+    <p class="am-text-middle">生成结果为：<span id="shortLink"></span></p>
+</div>
+
+<footer class="am-footer am-footer-default">
+    <div class="am-footer-miscs">
+        <p>Copyleft
+            <del>&copy;</del>
+            2018 Inkedawn
+        </p>
+    </div>
+</footer>
+
+<!-- [if (gte IE 9)|!(IE)] ><! -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- <![endif] -->
+<!-- [if lte IE 8] >
+<script src="https://cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif] -->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+

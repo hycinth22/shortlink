@@ -4,12 +4,6 @@ function shortenLink(link, callback) {
 
     console.log("submit url:" + link);
 
-    $("#txt").ajaxStart(function () {
-        $("#submitBtn").addClass("am-disabled");
-    });
-    $("#txt").ajaxComplete(function () {
-        $("#submitBtn").removeClass("am-disabled");
-    });
     $.ajax({
         url: "/add/",
         type: "post",
@@ -28,6 +22,13 @@ function shortenLink(link, callback) {
         }
     });
 }
+
+$("#txt").ajaxStart(function () {
+    $("#submitBtn").addClass("am-disabled");
+});
+$("#txt").ajaxComplete(function () {
+    $("#submitBtn").removeClass("am-disabled");
+});
 
 var submitBtn = document.getElementById("submitBtn");
 submitBtn.onclick = function (e) {
